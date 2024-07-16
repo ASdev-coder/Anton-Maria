@@ -176,8 +176,13 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+    .adaptive {
+        padding: 100em;
+        background-color: white;
+        position: absolute;
+    }
+
     body {
-        z-index: 341244;
         background-image: none;
     }
 }
