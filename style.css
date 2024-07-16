@@ -173,16 +173,3 @@ footer {
     font-size: 0.8em;
     margin: 0;
 }
-
-
-@media screen and (max-width: 768px) {
-    .adaptive {
-        padding: 100em;
-        background-color: white;
-        position: absolute;
-    }
-
-    body {
-        background-image: none;
-    }
-}
