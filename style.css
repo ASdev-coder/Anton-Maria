@@ -173,3 +173,11 @@ footer {
     font-size: 0.8em;
     margin: 0;
 }
+
+
+@media screen and (min-width: 320px) {
+    body {
+        z-index: 341244;
+        background-color: white;
+    }
+}
