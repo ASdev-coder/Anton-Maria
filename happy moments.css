@@ -175,3 +175,11 @@ footer {
 .text {
     text-align: center;
 }
+
+.start {
+    text-align: start;
+}
+
+.text p{
+    margin-top: 5px;
+}
