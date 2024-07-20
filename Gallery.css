@@ -141,7 +141,7 @@ img {
     top: 50%;
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.6s;
+    transition: opacity 0.4s;
 }
 
 .card-face-back {
