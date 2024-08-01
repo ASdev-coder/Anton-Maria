@@ -50,16 +50,11 @@
 
         <nav>
 
-            <select class="d-md-none">
+            <select class="d-md-none" id="navSelect">
 
-
-                <option>About us</option>
-
-
-                <option>Happy moments</option>
-
-
-                <option>Gallery</option>
+                <option value="index.html">About us</option>
+                <option value="Happy moments.html">Happy moments</option>
+                <option value="Gallery.html">Gallery</option>
 
             </select>
 
@@ -83,8 +78,8 @@
 
             <div class="row">
 
-                <div class="col-4"><img src="./images/photo Duboviy Gai.jpg" alt="our photo"></div>
-                <div class="col-8">
+                <div class="col-12 col-md-6 col-xl-4 order-2 order-md-1"><img src="./images/photo Duboviy Gai.jpg" alt="our photo"></div>
+                <div class="col-12 col-md-6 col-xl-8 order-1 order-md-2">
 
                     <div class="text">
                         <h1>Для чого цей сайт? <i class="fa-solid fa-laptop-code"></i></h1>
@@ -102,7 +97,7 @@
 
             <div class="row">
 
-                <div class="col-9">
+                <div class="col-12 col-md-6 col-xl-9">
 
                     <div class="text">
 
@@ -130,15 +125,15 @@
 
                 </div>
 
-                <div class="col-3"><img src="./images/first days of our friendship.jpg" alt="our photo"></div>
+                <div class="col-12 col-md-6 col-xl-3"><img src="./images/first days of our friendship.jpg" alt="our photo"></div>
 
             </div>
 
             <div class="row">
 
-                <div class="col-4"><img src="./images/kiss on duboviy gai.jpg" alt="our photo"></div>
+                <div class="col-12 col-md-6 col-xl-4 order-2 order-md-1"><img src="./images/kiss on duboviy gai.jpg" alt="our photo"></div>
 
-                <div class="col-8">
+                <div class="col-12 col-md-6 col-xl-8 order-1 order-md-2">
 
                     <div class="text">
 
@@ -193,6 +188,17 @@
         </div>
 
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navSelect = document.getElementById('navSelect');
+            navSelect.addEventListener('change', function () {
+                const selectedValue = navSelect.value;
+                if (selectedValue) {
+                    window.location.href = selectedValue;
+                }
+            });
+        });
+    </script>
 
 </body>
 
