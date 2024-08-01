@@ -48,10 +48,12 @@
 
         <nav>
 
-            <select class="d-md-none">
-                <option>About us</option>
-                <option>Happy moments</option>
-                <option>Gallery</option>
+            <select class="d-md-none" id="navSelect">
+
+                <option value="index.html">About us</option>
+                <option value="Happy moments.html">Happy moments</option>
+                <option value="Gallery.html">Gallery</option>
+
             </select>
 
             <div class="menu d-none d-md-block">
@@ -239,6 +241,17 @@
         </div>
 
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navSelect = document.getElementById('navSelect');
+            navSelect.addEventListener('change', function () {
+                const selectedValue = navSelect.value;
+                if (selectedValue) {
+                    window.location.href = selectedValue;
+                }
+            });
+        });
+    </script>
 
 </body>
 
