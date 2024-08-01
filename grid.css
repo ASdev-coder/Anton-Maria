@@ -176,7 +176,7 @@ img {
   }
 
   .container {
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 0;
   }
@@ -233,7 +233,11 @@ textarea {
 }
 
 /* xl */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
+  .container{
+    width: 80%;
+  }
+
   .col-xl-1 {
     width: calc(1 * 100% / 12);
   }
