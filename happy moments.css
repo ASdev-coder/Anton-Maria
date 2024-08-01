@@ -151,7 +151,7 @@ footer {
 }
 
 .fa-instagram {
-    margin: 0px 5px;
+    margin: 0px 2px;
     color: var(--icons-color);
     font-size: 20px;
 }
@@ -224,4 +224,7 @@ footer {
         order: 2;
     }
 
+    .fa-instagram {
+        margin: 0px 5px;
+    }
 }
