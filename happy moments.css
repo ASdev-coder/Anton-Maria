@@ -36,16 +36,16 @@ header {
 }
 
 .header-starter {
-    margin: 25px 0px 25px 0px;
+    margin: 0px 0px 25px 0px;
     background-image: url(https://cdn1.vectorstock.com/i/1000x1000/86/00/heart-texture-on-white-background-hand-drawn-vector-29058600.jpg);
 }
 
 header nav {
     background-color: pink;
     padding: 20px 0px 20px 0px;
-    border: 2px var(--border-color) solid;
-    border-radius: 30px;
-    width: 90%;
+    border-top: 2px var(--border-color) solid;
+    border-bottom: 2px var(--border-color) solid;
+    width: 100%;
     margin: auto;
     margin-bottom: 25px;
 }
@@ -95,8 +95,8 @@ nav a:hover {
 }
 
 .container {
-    border-radius: 30px;
-    border: 2px var(--border-color) solid;
+    border-top: 2px var(--border-color) solid;
+    border-bottom: 2px var(--border-color) solid;
     padding: 15px;
     background-color: pink;
 }
@@ -122,12 +122,11 @@ img {
 footer {
     text-align: center;
     background-color: pink;
-    border: 2px var(--border-color) solid;
+    border-top: 2px var(--border-color) solid;
     margin: auto;
     margin-top: 25px;
     padding: 20px 0px 20px 0px;
-    width: 90%;
-    border-radius: 30px 30px 0px 0px;
+    width: 100%;
 }
 
 .info-footer,
@@ -168,7 +167,7 @@ footer {
 }
 
 .text-footer {
-    font-size: 0.8em;
+    font-size: 0.5em;
     margin: 0;
 }
 
@@ -182,4 +181,46 @@ footer {
 
 .text p{
     margin-top: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .header-starter{
+        margin: 25px 0px 25px 0px;
+    }
+
+    header nav {
+        border: 2px var(--border-color) solid;
+        border-radius: 30px;
+        width: 90%;
+    }
+
+    .container{
+        border-radius: 30px;
+        border: 2px var(--border-color) solid;
+    }
+
+    .container .row{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+    }
+    
+    footer {
+        border: 2px var(--border-color) solid;
+        width: 90%;
+        border-radius: 30px 30px 0px 0px;
+    }
+
+    .text-footer{
+        font-size: 0.8em;
+    }
+
+    .row .order-md-1{
+        order: 1;
+    }
+
+    .row .order-md-2{
+        order: 2;
+    }
+
 }
