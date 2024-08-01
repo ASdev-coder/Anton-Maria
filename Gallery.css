@@ -105,6 +105,14 @@ nav a:hover {
     margin: 10px 0px;
 }
 
+.content-row{
+    margin: 0;
+}
+
+.content-row .col-12{
+    margin-bottom: 30px;
+}
+
 .row .col-12 {
     text-align: center;
     color: var(--border-color);
@@ -199,9 +207,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0px 5px 0px 5px;
 }
 
-.col-12 p {
+.px-20 p {
     font-size: 20px;
 }
 
