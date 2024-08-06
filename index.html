@@ -33,12 +33,30 @@
         rel="stylesheet">
 
     <link rel="icon" href="./images/Icons8-Ios7-Gaming-Hearts.512.png" type="image/png">
-    
+
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Сонечко❤️</h2>
+            <h2>З днем народження!🎉</h2>
+            <p>Нехай цей день буде наповнений радістю, посмішками та найтеплішими побажаннями. Бажаю
+                тобі безмежного щастя, натхнення та здійснення всіх найзаповітніших мрій. Нехай кожен день приносить
+                нові можливості та приємні сюрпризи, а поруч завжди будуть люблячі та підтримуючі люди.</p>
+
+            <p>Ти – дивовижна, яскрава та талановита особистість. Нехай твоє світло продовжує освітлювати життя всіх
+                навколо. Будь здорова, успішна та завжди щаслива!🤗💫🎉</p>
+
+            <p>З любов’ю,<br>
+                Антон❤️</p>
+        </div>
+    </div>
+
     <header>
 
         <div class="header-starter">
@@ -51,8 +69,7 @@
         <nav>
 
             <select class="d-md-none" id="navSelect">
-                
-                <option>Choose a section</option>
+
                 <option value="index.html">About us</option>
                 <option value="Happy moments.html">Happy moments</option>
                 <option value="Gallery.html">Gallery</option>
@@ -79,7 +96,8 @@
 
             <div class="row">
 
-                <div class="col-12 col-md-6 col-xl-4 order-2 order-md-1"><img src="./images/photo Duboviy Gai.jpg" alt="our photo"></div>
+                <div class="col-12 col-md-6 col-xl-4 order-2 order-md-1"><img src="./images/photo Duboviy Gai.jpg"
+                        alt="our photo"></div>
                 <div class="col-12 col-md-6 col-xl-8 order-1 order-md-2">
 
                     <div class="text">
@@ -126,13 +144,15 @@
 
                 </div>
 
-                <div class="col-12 col-md-6 col-xl-3"><img src="./images/first days of our friendship.jpg" alt="our photo"></div>
+                <div class="col-12 col-md-6 col-xl-3"><img src="./images/first days of our friendship.jpg"
+                        alt="our photo"></div>
 
             </div>
 
             <div class="row">
 
-                <div class="col-12 col-md-6 col-xl-4 order-2 order-md-1"><img src="./images/kiss on duboviy gai.jpg" alt="our photo"></div>
+                <div class="col-12 col-md-6 col-xl-4 order-2 order-md-1"><img src="./images/kiss on duboviy gai.jpg"
+                        alt="our photo"></div>
 
                 <div class="col-12 col-md-6 col-xl-8 order-1 order-md-2">
 
@@ -189,15 +209,51 @@
         </div>
 
     </footer>
+
+
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navSelect = document.getElementById('navSelect');
-            navSelect.addEventListener('change', function () {
-                const selectedValue = navSelect.value;
-                if (selectedValue) {
-                    window.location.href = selectedValue;
+        // Сообщение при заходе на сайт
+        document.addEventListener('DOMContentLoaded', function() {
+            // Показать модальное окно
+            var modal = document.getElementById("welcomeModal");
+            var modalContent = document.querySelector(".modal-content");
+            var span = document.getElementsByClassName("close")[0];
+
+            // Устанавливаем класс для плавного появления модального окна
+            setTimeout(function() {
+                modal.classList.add("show");
+            }, 100);
+
+            // Закрытие модального окна при клике на "X"
+            span.onclick = function() {
+                modalContent.classList.add("fade-out");
+                setTimeout(function() {
+                    modal.classList.remove("show");
+                    modalContent.classList.remove("fade-out");
+                    modal.style.display = "none";
+                }, 500); // Длительность анимации должна совпадать с CSS transition
+            }
+
+            // Закрытие модального окна при клике вне его
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modalContent.classList.add("fade-out");
+                    setTimeout(function() {
+                        modal.classList.remove("show");
+                        modalContent.classList.remove("fade-out");
+                        modal.style.display = "none";
+                    }, 500); // Длительность анимации должна совпадать с CSS transition
                 }
-            });
+            }
+        });
+
+        // Работа select
+        const navSelect = document.getElementById('navSelect');
+        navSelect.addEventListener('change', function() {
+            const selectedValue = navSelect.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
         });
     </script>
 
