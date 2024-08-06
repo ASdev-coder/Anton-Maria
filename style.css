@@ -196,6 +196,100 @@ footer {
     margin: 0;
 }
 
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    /* Скрыто по умолчанию */
+    position: fixed;
+    /* Окно фиксировано на экране */
+    z-index: 1000;
+    /* Появляется поверх всего остального */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Полная ширина */
+    height: 100%;
+    /* Полная высота */
+    overflow: auto;
+    /* Включаем прокрутку, если нужно */
+    background-color: rgb(0, 0, 0, 0.4);
+    /* Черный цвет с прозрачностью */
+    opacity: 0;
+    /* Начальная непрозрачность */
+    transition: opacity 0.5s ease;
+    /* Плавный переход для непрозрачности */
+}
+
+.modal.show {
+    display: block;
+    /* Показать модальное окно */
+    opacity: 1;
+    /* Конечная непрозрачность */
+}
+
+.modal-content {
+    background-color: var(--background-color);
+    margin: 5% auto;
+    /* 15% от верха экрана и по центру */
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    box-shadow: 0px 0px 10px var(--border-color);
+    animation: fadeIn 0.5s ease;
+    /* Анимация появления содержимого */
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    /* Плавный переход для содержимого */
+    font-family: "Roboto Condensed", sans-serif;
+    background-image: url(./images/6-pixel-heart-3.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    font-size: 16px;
+    color: var(--border-color);
+    font-weight: 600;
+    width: 80%;
+}
+
+.modal-content h2 {
+    color: var(--border-color);
+    font-size: 22px;
+}
+
+.modal-content.fade-out {
+    opacity: 0;
+    /* Конечная непрозрачность при исчезновении */
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: var(--border-color);
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    transition: all 0.4s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 @media screen and (min-width: 768px) {
     .header-starter {
         margin: 25px 0px 25px 0px;
@@ -257,95 +351,4 @@ footer {
     .close {
         font-size: 28px;
     }
-}
-
-/* Стили для модального окна */
-.modal {
-    display: none;
-    /* Скрыто по умолчанию */
-    position: fixed;
-    /* Окно фиксировано на экране */
-    z-index: 1000;
-    /* Появляется поверх всего остального */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Полная ширина */
-    height: 100%;
-    /* Полная высота */
-    overflow: auto;
-    /* Включаем прокрутку, если нужно */
-    background-color: rgb(0, 0, 0, 0.4);
-    /* Черный цвет с прозрачностью */
-    opacity: 0;
-    /* Начальная непрозрачность */
-    transition: opacity 0.5s ease;
-    /* Плавный переход для непрозрачности */
-}
-
-.modal.show {
-    display: block;
-    /* Показать модальное окно */
-    opacity: 1;
-    /* Конечная непрозрачность */
-}
-
-.modal-content {
-    background-color: var(--background-color);
-    margin: 5% auto;
-    /* 15% от верха экрана и по центру */
-    padding: 15px;
-    border: 1px solid var(--border-color);
-    text-align: left;
-    box-shadow: 0px 0px 10px var(--border-color);
-    animation: fadeIn 0.5s ease;
-    /* Анимация появления содержимого */
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    /* Плавный переход для содержимого */
-    font-family: "Roboto Condensed", sans-serif;
-    background-image: url(./images/6-pixel-heart-3.png);
-    background-position: center;
-    background-size: cover;
-    border-radius: 20px;
-    font-size: 16px;
-    color: var(--border-color);
-    font-weight: 600;
-}
-
-.modal-content h2 {
-    color: var(--border-color);
-    font-size: 22px;
-}
-
-.modal-content.fade-out {
-    opacity: 0;
-    /* Конечная непрозрачность при исчезновении */
-}
-
-@keyframes fadeIn {
-    from {
-        transform: translateY(-10%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.close {
-    color: var(--border-color);
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    transition: all 0.4s;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
 }
