@@ -240,23 +240,23 @@ footer {
         margin: 0px 5px;
     }
 
-    
-/* Стили для модального окна */
 
-.modal-content {
-    padding: 20px;
-    width: 40%;
-    font-size: 18px;
-}
+    /* Стили для модального окна */
 
-.modal-content h2{
-    color: var(--border-color);
-    font-size: 36px;
-}
+    .modal-content {
+        padding: 20px;
+        width: 40%;
+        font-size: 18px;
+    }
 
-.close {
-    font-size: 28px;
-}
+    .modal-content h2 {
+        color: var(--border-color);
+        font-size: 36px;
+    }
+
+    .close {
+        font-size: 28px;
+    }
 }
 
 /* Стили для модального окна */
@@ -296,8 +296,6 @@ footer {
     /* 15% от верха экрана и по центру */
     padding: 15px;
     border: 1px solid var(--border-color);
-    width: 80%;
-    /* Ширина 80% */
     text-align: left;
     box-shadow: 0px 0px 10px var(--border-color);
     animation: fadeIn 0.5s ease;
@@ -315,13 +313,14 @@ footer {
     font-weight: 600;
 }
 
-.modal-content h2{
+.modal-content h2 {
     color: var(--border-color);
     font-size: 22px;
 }
 
 .modal-content.fade-out {
-    opacity: 0; /* Конечная непрозрачность при исчезновении */
+    opacity: 0;
+    /* Конечная непрозрачность при исчезновении */
 }
 
 @keyframes fadeIn {
